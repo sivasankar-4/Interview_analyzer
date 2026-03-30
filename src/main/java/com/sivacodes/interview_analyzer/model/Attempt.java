@@ -2,6 +2,8 @@ package com.sivacodes.interview_analyzer.model;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,6 +19,7 @@ public class Attempt {
     private Boolean solved;
     
     @Column(name = "time_taken")
+    @JsonProperty("timeTaken")
     private Integer timetaken;
 
     private Integer attempts;
@@ -69,7 +72,7 @@ private Question question;
 
 
 
-    public int getTimetaken() {
+    public Integer getTimetaken() {
         return timetaken;
     }
 
@@ -81,7 +84,7 @@ private Question question;
 
 
 
-    public int getAttempts() {
+    public Integer getAttempts() {
         return attempts;
     }
 

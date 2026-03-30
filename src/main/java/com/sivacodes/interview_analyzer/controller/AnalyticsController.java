@@ -3,6 +3,8 @@ package com.sivacodes.interview_analyzer.controller;
 import com.sivacodes.interview_analyzer.dto.RecentAttemptDTO;
 //import com.sivacodes.interview_analyzer.model.Attempt;
 import com.sivacodes.interview_analyzer.service.AnalyticsService;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.HashMap;
 import java.util.*;
 
+@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/analytics")

@@ -36,6 +36,10 @@ public class AttemptController {
     public Attempt createAttempt(@RequestBody Attempt attempt) {
         return attemptService.saveAttempt(attempt);
     }
-
+    
+    // public Attempt updateAttempt(@PathVariable Long userId @RequestBody Attempt attempt) {
+    //     Attempt.setId(id);
+    //     return attemptService.saveAttempt(attempt);
+    // }
 
 }

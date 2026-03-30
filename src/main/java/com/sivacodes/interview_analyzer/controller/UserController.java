@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+//import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 
 
@@ -28,10 +29,11 @@ public class UserController {
 
     private final UserService userService;
 
-     @GetMapping
+     @GetMapping("/getAllUsers")
      public List<User> getAllUsers() {
          return userService.getAllUsers();
      }
+    
      @GetMapping("/getUser/{id}")
      public User getUserById(@PathVariable Long id) {
         return userService.getUserById(id);

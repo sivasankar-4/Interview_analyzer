@@ -44,9 +44,11 @@ public class AnalyticsService {
        
        HashMap<String, Double> topicAccuracy = new HashMap<>();
        for(String topic : total.keySet()) {
-           int solvedCount = (solved.getOrDefault(topic, 0));
+           int solvedCount = solved.getOrDefault(topic, 0);
            int totalCount = total.get(topic);
+           if(totalCount == 0) continue;
            double accuracy = (solvedCount * 100.0) / totalCount;
+           accuracy = Math.round(accuracy *100.0)/100.0;
            topicAccuracy.put(topic, accuracy);
        }
        
@@ -73,7 +75,9 @@ public class AnalyticsService {
             totalTime +=attempt.getTimetaken();
         }
 
-        return (double) totalTime / attempts.size();
+        double avg =  (double) totalTime / attempts.size();
+
+        return Math.round(avg *100)/100;
     }
     // Method to find weak topics based on accuracy
     //it checks each topic accuracy if accuracy < 50% then add it to weakTopicsList;
