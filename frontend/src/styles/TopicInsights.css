@@ -1,0 +1,83 @@
+
+.insights-container {
+  padding: 20px;
+  background: #0f172a;
+  min-height: 100vh;
+  color: #fff;
+}
+
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.insight-card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Titles */
+.strong-title {
+  color: #22c55e; 
+  margin-bottom: 12px;
+}
+
+.weak-title {
+  color: #ef4444; 
+  margin-bottom: 12px;
+}
+
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+
+.tag.strong {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.tag.strong:hover {
+  background: #22c55e;
+  color: #fff;
+}
+
+
+.tag.weak {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.tag.weak:hover {
+  background: #ef4444;
+  color: #fff;
+}

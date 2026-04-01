@@ -1,0 +1,51 @@
+.dashboard {
+  padding: 30px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  transition: 0.3s;
+}
+
+.card h3 {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Colors */
+.card.blue {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.card.green {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.card.purple {
+  background: linear-gradient(135deg, #a855f7, #7e22ce);
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+}
