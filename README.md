@@ -1,35 +1,112 @@
-# Interview Performance Analyzer
+# Interview Analyzer 🚀
 
-A Backend system that tracks coding practice performance
-and provides analytics such as accuracy, weak topics,
-average solving time, and recent attempts.
+A full-stack web application that helps users analyze their coding performance, identify strong and weak topics, and track their progress visually.
 
-## Tech Stack
-Java
-Spring Boot
-Spring Data JPA
-MySQL
-Lombok
+---
 
-## Features
-User management
-Topic and question tracking
-Attempt recording
-Performance analytics
-DTO-based responses
-Global exception handling
-Validation
+## 🔥 Features
 
-## APIs
-POST /users
-POST /topics
-POST /questions
-POST /attempts
+* 📊 Topic-wise accuracy analysis (Bar Chart)
+* 📈 Strong & Weak topic identification
+* 🕒 Recent attempts tracking
+* 📌 Clean dashboard UI
+* 🔐 Backend with API handling
 
-GET /analytics/accuracy/{userId}
-GET /analytics/topic-accuracy/{userId}
-GET /analytics/average-time/{userId}
-GET /analytics/weak-topics/{userId}
-GET /analytics/strong-topics/{userId}
-GET /analytics/top-topic/{userId}
-GET /analytics/recent-attempts/{userId}
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Axios
+* Chart.js
+* CSS
+
+### Backend
+
+* Spring Boot
+* Spring Data Jpa
+* MySQL
+
+---
+
+## 📁 Project Structure
+
+```
+Interview_analyzer/
+ ├── frontend/              # Frontend (React)
+ ├── src/                   # Backend (Spring Boot)
+ ├── pom.xml
+```
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1️⃣ Backend
+
+```
+cd Interview_analyzer
+mvn spring-boot:run
+```
+
+Runs on:
+
+```
+http://localhost:8090
+```
+
+---
+
+### 2️⃣ Frontend
+
+```
+cd Interview_analyzer
+cd frontend
+npm install
+npm start
+```
+
+Runs on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📸 Screenshots
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### Analytics
+![Analytics](screenshots/analytics.png)
+
+---
+
+### Strong & Weak Topics
+![TopicInsights](screenshots/topicInsights.png)
+
+### RecentAttempts
+
+![RecentAttempts](screenshots/recentAttempt.png)
+
+---
+
+## 🚀 Future Improvements
+
+* User authentication UI
+* Performance analytics graphs
+* Deployment with cloud services
+
+---
+
+## 👨‍💻 Author
+
+Siva Sankar
