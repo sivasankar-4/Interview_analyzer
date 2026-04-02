@@ -8,7 +8,7 @@ function AnalyticsPage () {
         <div>
             <h1 style={{
                 marginBottom: "20px"
-            }}></h1>
+            }}>Analytics Dashboard</h1>
             <Analytics/>
 
               <h1 style={{
