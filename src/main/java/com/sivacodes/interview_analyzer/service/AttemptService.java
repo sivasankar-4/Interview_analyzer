@@ -8,19 +8,26 @@ import com.sivacodes.interview_analyzer.repository.AttemptRepository;
 import com.sivacodes.interview_analyzer.repository.QuestionRepository;
 import com.sivacodes.interview_analyzer.repository.UserRepository;
 
+import lombok.RequiredArgsConstructor;
+
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+@RequiredArgsConstructor
 
 @Service
 public class AttemptService {
     
-   
+    @Autowired
     private  AttemptRepository attemptRepository;
-
+    
+    @Autowired
     private  UserRepository userRepository;
-
-    private  QuestionRepository questionRepository;
+    
+    @Autowired
+    private QuestionRepository questionRepository;
 
     public AttemptService(AttemptRepository attemptRepository) {
         this.attemptRepository = attemptRepository;
