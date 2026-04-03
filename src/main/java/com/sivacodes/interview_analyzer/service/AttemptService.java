@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
@@ -20,19 +20,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class AttemptService {
     
-    @Autowired
-    private  AttemptRepository attemptRepository;
     
-    @Autowired
-    private  UserRepository userRepository;
+    private final  AttemptRepository attemptRepository;
     
-    @Autowired
-    private QuestionRepository questionRepository;
+    
+    private final UserRepository userRepository;
+    
 
-    public AttemptService(AttemptRepository attemptRepository) {
-        this.attemptRepository = attemptRepository;
-        
-    }
+    private final QuestionRepository questionRepository;
+
+    
     public java.util.List<Attempt> getAllAttempts() {
         return attemptRepository.findAll();
     }
