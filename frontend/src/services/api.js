@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const API = axios.create({
-    baseURL: "http://localhost:8080"
+    baseURL: "https://interview-analyzer-8c77.onrender.com"
 });
 
 export const getAccuracy = (userId) => 
