@@ -53,10 +53,10 @@ mvn spring-boot:run
 
 Runs on:
 
-```
-https://interview-analyzer-two.vercel.app/
-```
+Backend
 
+---
+https://interview-analyzer-8c77.onrender.com
 ---
 
 ### 2️⃣ Frontend
@@ -67,6 +67,12 @@ cd frontend
 npm install
 npm start
 ```
+Frontend
+
+```
+https://interview-analyzer-two.vercel.app
+```
+
 
 
 
