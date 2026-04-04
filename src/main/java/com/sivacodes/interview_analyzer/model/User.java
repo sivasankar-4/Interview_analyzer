@@ -67,8 +67,5 @@ public class User {
         this.passwordHash = passwordHash;
     }
 
-    // public void setId(Long id2) {
-    //     // TODO Auto-generated method stub
-    //     throw new UnsupportedOperationException("Unimplemented method 'setId'");
-    // }
+    
 }
