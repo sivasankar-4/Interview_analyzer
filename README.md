@@ -54,7 +54,7 @@ mvn spring-boot:run
 Runs on:
 
 ```
-http://localhost:8090
+https://interview-analyzer-two.vercel.app/
 ```
 
 ---
@@ -68,13 +68,7 @@ npm install
 npm start
 ```
 
-Runs on:
 
-```
-http://localhost:3000
-```
-
----
 
 ## 📸 Screenshots
 
