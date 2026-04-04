@@ -15,19 +15,24 @@ import java.util.List;
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@RequiredArgsConstructor
+
 
 @Service
+@RequiredArgsConstructor
 public class AttemptService {
     
     
     private final  AttemptRepository attemptRepository;
     
     
-    private final UserRepository userRepository;
+     private final UserRepository userRepository;
     
 
-    private final QuestionRepository questionRepository;
+     private final QuestionRepository questionRepository;
+
+    // public AttemptService(AttemptRepository attemptRepository){
+    //     this.attemptRepository = attemptRepository;
+    // }
 
     
     public java.util.List<Attempt> getAllAttempts() {
@@ -40,18 +45,25 @@ public class AttemptService {
 
     public Attempt saveAttempt(Attempt attempt) {
         
-        Long userId = attempt.getUser().getId();
-        Long questionId = attempt.getQuestion().getId();
+       if(attempt.getUser() == null || attempt.getUser().getId() == null){
+        throw new RuntimeException("User Id is required");
+       }
 
-        User user = userRepository.findById(userId)
-                    .orElseThrow(() -> new RuntimeException("User not found"));
+       if(attempt.getQuestion() == null || attempt.getQuestion().getId() == null){
+        throw new RuntimeException("Question Id is required");
+       }
+       Long userId = attempt.getUser().getId();
+       Long questionId = attempt.getQuestion().getId();
 
-        Question question = questionRepository.findById(questionId)
-                            .orElseThrow(() -> new RuntimeException("Question not found"));
+       User user = userRepository.findById(userId)
+                   .orElseThrow(() -> new RuntimeException("user not found with id: " + userId));
+
+       Question question = questionRepository.findById(questionId)
+                           .orElseThrow(() -> new RuntimeException("Question not found with id:" + questionId));
 
         attempt.setUser(user);
         attempt.setQuestion(question);
-          
+
         return attemptRepository.save(attempt);
     }
 
