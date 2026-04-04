@@ -51,13 +51,6 @@ cd Interview_analyzer
 mvn spring-boot:run
 ```
 
-Runs on:
-
-Backend
-
----
-https://interview-analyzer-8c77.onrender.com
----
 
 ### 2️⃣ Frontend
 
@@ -67,16 +60,19 @@ cd frontend
 npm install
 npm start
 ```
-Frontend
-
-```
-https://interview-analyzer-two.vercel.app
-```
 
 
+## 🚀 Live Application
+
+- 🌐 Frontend (Vercel): https://interview-analyzer-two.vercel.app/
+- 🔗 Backend API (Render): https://interview-analyzer-8c77.onrender.com
 
 
-## 📸 Screenshots
+## 🚀 Live Demo
+
+👉 [Open App](https://interview-analyzer-two.vercel.app/)
+
+
 
 ## 📸 Screenshots
 
