@@ -26,7 +26,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("http://localhost:3000");
+        config.addAllowedOrigin("https://interview-analyzer-two.vercel.app");
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
 
